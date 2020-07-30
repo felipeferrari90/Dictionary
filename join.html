@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+</head>
+<body>
+    
+<JOIN - juncao de duas tabelas em uma>             
+
+     A              B
+-----------    -----------
+-  felipe -    -  zeca   -
+-  danilo -    -carlinhos-
+-   feg   -    -   joao  -
+-  vitor  -    -  toteio -
+-  diego  -    -  paulo  -
+-  rafael -    -  pedro  -
+-----------    -----------
+
+a tabela A possui dependencia relacional da tabela B (iddopai é a FK da tabela A)
+
+<!---------------------------------------------------------------------------------------------------->
+
+<INNER-JOIN -   tabela com apenas A+B>
+
+    SELECT a.Nome, b.Nome FROM a INNER JOIN b on a.idDoPai = b.id
+
+    query
+    ----------------------
+    - felipe  -   zeca   -
+    - danilo  - carlinhos-
+    -  vitor  -   zeca   -
+    -  diego  -   joao   -
+    ---------------------- 
+
+JOIN = INNER JOIN
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<LEFT-JOIN - tabela com A e A+B >
+
+    SELECT a.Nome, b.Nome FROM a RIGHT JOIN b on a.idDoPai = b.id
+    
+       query
+    ----------------------
+    - felipe  -   zeca   -
+    - danilo  - carlinhos-
+    -   feg   -          -
+    -  vitor  -   zeca   -
+    -  diego  -   joao   -
+    - rafael  -          -
+    ---------------------- 
+
+LEFT JOIN = LEFT OUTER JOIN 
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<RIGHT-JOIN -   tabela com A+B e B>
+
+    SELECT a.Nome, b.Nome FROM a LEFT JOIN b on a.idDoPai = b.id
+    
+       query
+    ----------------------
+    - felipe  -   zeca   -
+    - danilo  - carlinhos-
+    -  vitor  -   zeca   -
+    -  diego  -   joao   -
+    -         -  toteio  -
+    -         -  paulo   -
+    -         -  pedro   -
+    ---------------------- 
+
+RIGHT JOIN = RIGHT OUTER JOIN 
+    
+<!---------------------------------------------------------------------------------------------------->
+
+
+<OUTER-JOIN -   tabela com A e A+B e B>
+
+    SELECT a.Nome, b.Nome FROM a OUTER JOIN b on a.idDoPai = b.id
+    
+       query
+    ----------------------
+    - felipe  -   zeca   -
+    - danilo  - carlinhos-
+    -   feg   -          -
+    -  vitor  -   zeca   -
+    -  diego  -   joao   -
+    -  rafael -          -
+    -         -  toteio  -
+    -         -  paulo   -
+    -         -  pedro   -
+    ---------------------- 
+
+OUTER JOIN = FULL OUTER JOIN 
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<LEFT-EXCLUDING-JOIN -   tabela com A excluindo A+B >
+
+    SELECT a.Nome, b.Nome FROM a LEFT EXCLUDING JOIN b on a.idDoPai = b.id
+    
+       query
+       ----------------------
+       -   feg   -          -
+       - rafael  -          -
+       ---------------------- 
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<RIGHT-EXCLUDING-JOIN -   tabela excluindo A+B + B >
+
+    SELECT a.Nome, b.Nome FROM a RIGHT EXCLUDING JOIN b on a.idDoPai = b.id
+    
+       query
+       ----------------------
+       -         -  toteio  -
+       -         -  paulo   -
+       -         -  pedro   -
+       ---------------------- 
+
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<OUTER-EXCLUDING-JOIN -   tabela com A excluindo A+B e B>
+
+    SELECT a.Nome, b.Nome FROM a OUTER EXCLUDING JOIN b on a.idDoPai = b.id
+    
+       query
+    ----------------------
+    -   feg   -          -
+    -  rafael -          -
+    -         -  toteio  -
+    -         -  paulo   -
+    -         -  pedro   -
+    ---------------------- 
+    
+</body>
+</html>

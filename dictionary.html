@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICTIONARY</title>
+</head>
+<body>
+<!---------------------------------------------------------------------------------------------------->
+
+REST FUL
+
+<!---------------------------------------------------------------------------------------------------->
+
+REST
+
+<!---------------------------------------------------------------------------------------------------->
+
+END POINT e diferencas com url
+
+<!---------------------------------------------------------------------------------------------------->
+
+relacao end point com API 
+
+<!---------------------------------------------------------------------------------------------------->
+
+WEB SERVICE
+
+<!---------------------------------------------------------------------------------------------------->
+
+FEATURES 
+
+<!---------------------------------------------------------------------------------------------------->
+
+API
+
+<!---------------------------------------------------------------------------------------------------->
+
+VALIDAÇÃO
+
+<!---------------------------------------------------------------------------------------------------->
+
+FEATURES
+
+<!---------------------------------------------------------------------------------------------------->
+
+NODES
+
+<!---------------------------------------------------------------------------------------------------->
+
+INJECÃO DE DEPENDENCIA
+
+<!---------------------------------------------------------------------------------------------------->
+
+ACOPLAMENTO DA CLASSE
+
+<!---------------------------------------------------------------------------------------------------->
+
+INVERSÃO DE CONTROLE mostrando as relacoes e diferencas com injecao de dependencia
+
+<!---------------------------------------------------------------------------------------------------->
+
+CALLBACK
+
+<!---------------------------------------------------------------------------------------------------->
+
+FALLBACK
+
+<!---------------------------------------------------------------------------------------------------->
+
+LAMBIDA
+
+<!---------------------------------------------------------------------------------------------------->
+
+PERSISTÊNCIA
+
+<!---------------------------------------------------------------------------------------------------->
+
+4 TIPOS DE LINGUAGENS DE PROGRAMACAO
+
+<!---------------------------------------------------------------------------------------------------->
+
+PARADIGMAS
+
+<!---------------------------------------------------------------------------------------------------->
+
+ORIENTADO A EVENTOS 
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x XHR>
+
+  XmlHttpRequest - É uma API que fornece um objeto(obj XmlHttpRequest) que oferece funcionalidade 
+                   para transferenca de dados entre CLIENT e SERVIDOR, pode ser xhr response tambem
+                   
+                   essa API ja vem embutida nos navegadores
+
+<!---------------------------------------------------------------------------------------------------->
+
+COMPILADOR ou LINGUAGEM COMPILADA
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x VARIAVEL DE AMBIENTE>
+
+    - são criadas no sistema operacional pra que seu CMD possa ter acesso a um 
+      executavel(.exe ou .bat ou outros) de qualquer hierarquia do CMD (ele é tipo GLOBAL)
+
+    - é basicamente um atalho visivel para todo o seu sistema 
+
+    - ex: quando algum programa precisa do compilador de Java, pesquisa nessas variáveis por 
+      algum caminho que leve até o programa executavel . Para isso, esse caminho precisa estar 
+      definido em alguma dessas variáveis de ambiente.
+    
+    - ex2: imagine um programa de script de backup ele foi criado em uma hierarquia de pastas  
+      c:/users/felipe/desktop/ex , vc só vai conseguir usar esse script se tiver na hierarquia 
+      c:/users/felipe/desktop/ex mas seria interessante a gente poder acessala de fora dessa hierarquia
+
+    - ex2.1: pra resolver isso vamos criar uma pasta BIN e colocar nosso script.bat nela,
+             depois vamos adicionar um caminho em PATH
+
+             c:users/felipe/desktop/ex/bin/script.bat
+
+    - ex2.2: pra resolver isso vamos criar uma pasta BIN e colocar nosso script.bat nela,
+             depois vamos adicionar um caminho em PATH, PATH por si so tem varios outros 
+             caminhos e vc só vai add mais um, entao coloque dessa forma (se vc usar atrubicao
+             sem o %PATH% vc vai apagar todos os caminhos existentes e colocar somente o seu)   
+             
+             set PATH = %PATH%;c:/users/felipe/desktop/ex/bin
+    
+    - ex2.2: se vc executar o script agora fora da hierarquia vai funcionar, pelo menos ate vc 
+             fechar e abrir denovo o seu CMD 
+
+             cmd:  c:/script.bat    //vai executar o script em c:users/felipe/desktop/ex/bin/script.bat
+
+    - ex2.3: mudando permanentemente (tem que executar o cmd como adm)
+             
+             setx PATH "%PATH%; c:/users/felipe/desktop/ex/bin" /M
+    
+    - ex2.4: vc ate pode criar variaveis de ambiente proprias e nao usar o PATH usando o SET no cmd
+             
+             set PASTA_CODIGO=C:c:users/felipe/desktop/ex/bin
+
+    - ex2.5: digitando SET no cmd vc tem acesso a todas as variaveis de ambiente do windows         
+
+<!------------------------------------------------------------------------------------------------->
+
+<x VARIAVEL PATH>   
+
+    - path é uma das tantas variaveis de ambientes do windows , não todas, mas nela vc 
+      encontra varios caminhos
+    
+    - ex: quando vc da um comando LS ou CD ou um DIR no CMD o windows faz uma varredura no 
+      sistema pra achar o executavel correspondente ao comando, ele acessa varias 
+      variaveis do sistema, e o PATH é uma delas, 
+    
+    - echo %PATH% - comando pra vc imprimir todas as variaveis de ambiente contidas
+                    em PATH 
+    
+    - em cada variavel de ambiente contem varios caminhos separados por ";". o windows
+      procurará um .exe em cada arquivo.
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x BIN ou .bin>
+
+  a extensao .bin se refere quando vc salvar coisas em binario, somente outros programas podem ler
+  esse binario (ultra iso) 
+
+  PASTA BIN - diretorio que armazeniza executaveis do seu programa (.exe .bat)
+
+  por padrão os programadores colocam uma pasta bin na hierarquia da pasta home(nome do usuario)
+  
+<!---------------------------------------------------------------------------------------------------->
+
+<x .EXE .BAT E EXTENSOES DE EXECUTAVEIS>
+
+  .EXE - arquivos que pode ser executados por um user, -programa dentro de um SO windows
+
+  .DLL - Também conhecida como biblioteca de vínculo dinâmico, é um arquivo que pode ser acessado 
+         por varios programas de computador(até simultaneamente), podem conter codigos, dados 
+         recursos(icones, fontes, cursores...)
+
+         ex- Controles ActiveX (OCX);
+             Arquivos do Painel de Controle (CPL);
+             Arquivos de driver de dispositivos (DRV).
+  
+  .BAT - Um arquivo com essa extensão pode ser definido como um conjunto de comandos executados em lote (
+         sequencialmente), é executado com dois cliques sobre o arquivo 
+
+  .CMD - é quase igual a o BAT com uma diferenca na variavel ERRORLEVEL
+
+ 
+<!---------------------------------------------------------------------------------------------------->
+
+
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+
+
+MAQUINA VIRTUAL DA LINGUAGEM
+
+<!---------------------------------------------------------------------------------------------------->
+
+RUNTIME
+
+<!---------------------------------------------------------------------------------------------------->
+
+BINDING 
+
+<!---------------------------------------------------------------------------------------------------->
+
+HANDLERS (é só pra eventos?)
+
+<!---------------------------------------------------------------------------------------------------->
+
+SINGLETON
+
+<!---------------------------------------------------------------------------------------------------->
+
+ASSINCRONO E SINCRONO
+
+<!---------------------------------------------------------------------------------------------------->
+
+ENUM E CONSTANTES E O FINAL 
+
+<!---------------------------------------------------------------------------------------------------->
+
+FORKAR
+
+<!---------------------------------------------------------------------------------------------------->
+
+CLONAR - diferenca com forkar
+
+<!---------------------------------------------------------------------------------------------------->
+
+PULL REQUEST
+
+<!---------------------------------------------------------------------------------------------------->
+
+MERGE
+
+<!---------------------------------------------------------------------------------------------------->
+
+BRANCH
+
+<!---------------------------------------------------------------------------------------------------->
+
+REMOTE E ORIGIN
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x QUERY>
+
+  É uma solicitação de informações feita ao banco de dados. que retorna uma tabela ou um conjunto delas, 
+  figuras, gráficos ou resultados complexos podendo se usar varias linguagens disso (sql, oracle, mongo)
+
+    ex de uma query: SELECT * FROM pessoas WHERE id = 1;
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x RESULT SET>
+
+  ResultSet é uma interface utilizada(EM JAVA) pra guardar dados vindos de um banco de dados.
+  Basicamente, ela guarda o resultado de uma pesquisa numa estrutura de dados que pode ser percorrida, 
+  de forma que você possa ler os dados do banco.
+
+  - basicamente é o resultado de sua query
+
+<!---------------------------------------------------------------------------------------------------->
+
+<x JOIN>  
+
+    <a href="join.html"></a>
+
+<!---------------------------------------------------------------------------------------------------->
+
+</x UNION>
+
+    <a href="union.html"></a>
+    
+<!---------------------------------------------------------------------------------------------------->
+
+</x INTEGRIDADE, INTEGRIDADE REFERENCIAL e DEPENDENCIA RELACIONAL>
+
+    INTEGRIDADE - é a manutencao e garantia da consistencia e precisao dos dados em um banco de dados.
+                  (sem dados corrompidos) ela é atingida pelas restrições de integridade 
+
+    INTEGRIDADE RELACIONAL- assegura que o valor de coluna de uma tabela é igual ao valor de 
+                            coluna de outra tabela desde que ambos estejam relacionadas.
+
+    tem a ver com as chaves estrangeiras, é quando uma FK de uma tabela destino tem que ser 
+    PK de alguma tabela origem. quando isso nao é respeitado a gente diz que a INTEGRIDADE REFERENCIAL
+    das duas tabelas foram violadas
+
+    CARROS                                       PESSOAS
+    placa(PK)   modelo   proprietario(FK)        id(PK)      nome
+    ---------------------------------          ----------------------    
+    -   1      -  fiat   -  1       -          -   1      -  joao   - 
+    -   2      -   uno   -  2       -          -   2      -  maria  - 
+    -   3      -  fusca  -  1       -          ----------------------
+    --------------------------------- 
+
+    (filho)                                     (pai)
+    (entidade fraca)                            (entidade forte)      
+
+    => o filho sempre tera a FK que é a PK da do PAI
+
+    => podemos dizer que a entidade filha(carros) depende da entidade pai(pessoas) para existir
+       a tabela filha possui DEPENDENCIA relacional de PAI afinal se PAI por excluido a tabela 
+      FILHO nao se sente nessecidade de existir
+   
+    A violacao da INTEGRIDADE REFERENCIAL ocorre quando:
+    => se criarmos um carro e colocarmos 3 como o ID do proprietario
+    => se deletarmos o usuario maria sem alterar o id proprietario da tabela carros
+    => se deletarmos a tabela carros o que faz essa tabela ser de ENTIDADE FRACA
+    => a tabela PESSOAS pode ser excluida sem problemas o que a faz ser uma ENTIDADE FORTE 
+
+<!---------------------------------------------------------------------------------------------------->
+
+</x SQL MER>
+
+  MER = Modelo ER - Modelo Entidade Relacionamento
+  </1:n>   
+   
+      CLIENTE                                 PEDIDO
+    ------------                       ------------------
+    |  id(PK)  | 1                   N |   id(PK)       |
+    |  nome    |- - - - - -____________| nome_prato     |   
+    ------------                       | id_cliente(FK) |          
+                                       ------------------
+    
+    (pai)                                        (filha)
+    (forte)                                      (fraca)
+
+        CARDINALIDADE - é colado na tabela oposta à aquela que o invocou
+        GRAU - sai da tabela que o invocou
+                               
+          CARDINALIDADE
+          1 cliente pode fazer VARIOS pedidos 
+          1 pedido só pode ter 1 cliente como dono (--)  
+
+          GRAU
+          1 cliente PODE ter VARIOS pedidos (-----) e 1 cad de cliente pode ter 0 pedidos 
+          1 pedido DEVE ter um cliente como dono (______)  ou 1 pedido nao pode ter 0 clientes
+
+  => se os dois graus de um relacionamento forem opcionais, as duas entidades são FORTES.
+  => relacionamentos N:M tem que ser ramificados em dois 1:N;
+
+<!---------------------------------------------------------------------------------------------------->
+
+</x ENTIDADE FORTE E FRACA>
+
+    ENTIDADE FRACA - é a entidade que nao possui existencia propria(sua existencia depende de outra
+    entidade (tabela pessoas)) - é a tabela em que sua PK serve de FK de attr em uma outra entidade
+    ou seja se ela for excluida caga o sistema pq afeta a tabela pai que nao tem FK poremos dizer:
+      
+      => a ~ENTIDADE FRACA~(filha) é dependente(dependente relacional) da ~ENTIDADE FORTE~(pai)
+      => a ~ENTIDADE FRACA~(filha) é filha de ~ENTIDADE FORTE~(pai)
+
+    ENTIDADE FORTE - pra ela existir nao depende 
+<!---------------------------------------------------------------------------------------------------->
+
+</x ENTIDADE DOMINANTE E SUBORDINADA>
+
+PROFESSOR                              ARMARIO
+------------                       ---------------
+|  id(PK)  | 1                   1 |   id(PK)    |
+|  nome    |- - - - - -____________| id_prof(FK) |    
+------------                       ---------------        
+                                   
+=> em relacoes 1 para 1 se escolhe a entidade dominante 
+=> a entidade DOMINANTE é a ENTIDADE FORTE ou A PAI as vezes, aquela que ira dar a sua chave
+
+=>Dominante é o que nao depende de ninguem
+=>Subordinada é a entidade que depende de outra pra existir, e caso a dominante seja excluida
+  a subordinada tambem é(ou deveria ser).
+
+<!---------------------------------------------------------------------------------------------------->
+
+   ESQUEMA = BANCO DE DADOS?
+
+<!---------------------------------------------------------------------------------------------------->
+
+</x SOAP>
+
+<!---------------------------------------------------------------------------------------------------->
+
+.toMAP
+
+<!---------------------------------------------------------------------------------------------------->
+
+BASE DE DADOS
+
+    Bancos de dados ou bases de dados são conjuntos de arquivos relacionados entre si com registros 
+    sobre pessoas, lugares ou coisas. São coleções organizadas de dados que se relacionam de forma a 
+    criar algum sentido (Informação) e dar mais eficiência durante uma pesquisa ou estudo cientifico.
+
+<!---------------------------------------------------------------------------------------------------->
+
+SEMANTICA DE VERSIONAMENTO E .RELEASE
+
+<!---------------------------------------------------------------------------------------------------->
+
+THREADS diferença com PROCESSOS
+
+<!---------------------------------------------------------------------------------------------------->
+
+HTPPS , HTTP , HTTP2.O como operam
+
+<!---------------------------------------------------------------------------------------------------->
+
+LADO DE SERVIDOR ou server-side
+
+<!---------------------------------------------------------------------------------------------------->
+
+SERIALIZAÇÃO
+
+<!---------------------------------------------------------------------------------------------------->
+
+TASKS
+
+<!---------------------------------------------------------------------------------------------------->
+
+FETCH 
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

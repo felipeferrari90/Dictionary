@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union</title>
+</head>
+<body>
+    
+<x UNION E OPERADORES DE CONJUNTO- combina os resultados de duas ou mais queries em um único result set, retornando todas as linhas
+pertencentes a todas as queries envolvidas na execução. as tabelas nao possui nenhuma relacao> 
+
+tabela familia       - id nome ocupacao renda
+tabela trabalhadores - id nome cargo    salario
+
+  familia     trabalhadores
+   .nome         .nome
+-----------    -----------   -----------
+- felipe  -    - cris    -   -  1959   -
+-  cris   -    - diego   -   -  1960   -
+-  vitor  -    - vitor   -   -  ...    -
+-  zeca   -    - zeca    -   -  2019   -
+- amelia  -    -----------     
+-----------
+<!---------------------------------------------------------------------------------------------------->
+
+<UNION - ele combina o resltado de duas consultas e faz um DISTINCT e ORDER nelas>
+
+    SELECT id, nome, renda FROM familia UNION SELECT id, nome, salario FROM trabalhadores
+
+        id         nome       valor
+    -----------------------------------
+    -    1    -   cris   -   1200     -
+    -    1    -  felipe  -    60      -  
+    -    2    -  diego   -    700     -
+    -    2    -   cris   -   1200     -
+    -    3    -  vitor   -   3500     -
+    -    4    -   zeca   -   3000     -
+    -    5    -  amelia  -     0      -
+    ----------------------------------- 
+    -7rows
+   
+    SELECT nome, renda FROM familia UNION SELECT nome, salario FROM trabalhadores
+
+    -------------------------
+    -   cris   -   1200     -
+    -   cris   -   1200     -
+    -  felipe  -    60      -  
+    -  diego   -    700     -
+    -  vitor   -   3500     -
+    -   zeca   -   3000     -
+    -  amelia  -     0      -
+    -------------------------
+    -6rows
+
+    => as tabelas nao possuem nenuma relação (integridade relacional)
+    => o union une duas colunas em uma desde que elas sejam do mesmo datatype
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<UNION_ALL - ele combina o resltado de duas consultas e repete os resultados duplicado>
+
+    SELECT id, nome, renda FROM familia UNION ALL SELECT id, nome, salario FROM trabalhadores
+
+        id         nome       valor
+    -----------------------------------
+    -    1    -  felipe  -    60      -
+    -    2    -   cris   -   1200     -
+    -    3    -  vitor   -   3500     -
+    -    4    -   zeca   -   3000     -
+    -    5    -  amelia  -     0      -
+    -    1    -   cris   -   1200     -
+    -    2    -  diego   -    700     -
+    -    3    -  vitor   -   3500     -
+    -    4    -   zeca   -   3000     -
+    ----------------------------------- 
+    -9rows
+   
+    SELECT nome, renda FROM familia UNION ALL SELECT nome, salario FROM trabalhadores
+
+    -------------------------
+    -  amelia  -    0       -
+    -   cris   -   1200     -
+    -   cris   -   1200     -
+    -   diego  -   700      -
+    -  felipe  -    60      -
+    -  vitor   -   3500     -
+    -  vitor   -   3500     -
+    -   zeca   -   3000     -
+    -   zeca   -   3000     -
+    -------------------------
+    -9rows
+
+    => as tabelas nao possuem nenuma relação (integridade relacional)
+    => o union une duas colunas em uma desde que elas sejam do mesmo datatype
+
+<!---------------------------------------------------------------------------------------------------->
+
+
+<INTERSECT -   retorna apenas os repetidos>
+
+    SELECT nome, renda FROM familia INTERSECT SELECT nome, salario FROM trabalhadores
+
+    -------------------------
+    -   cris   -   1200     -
+    -   cris   -   1200     -
+    -  vitor   -   3500     -
+    -  vitor   -   3500     -
+    -   zeca   -   3000     -
+    -   zeca   -   3000     -
+    -------------------------
+    -9rows
+    
+<!---------------------------------------------------------------------------------------------------->
+
+
+<MINUS - retorna as linhas da primeira consulta que nao sao relacionadas com a segunda (1cons - 2cons)>
+
+    SELECT nome, renda FROM familia MINUS SELECT nome, salario FROM trabalhadores
+
+    -------------------------
+    -  amelia  -    0       -
+    -  felipe  -    60      -
+    -------------------------
+    -2rows
+    
+</body>
+</html>
