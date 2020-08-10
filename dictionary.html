@@ -8,39 +8,410 @@
 <body>
 <!---------------------------------------------------------------------------------------------------->
 
-REST FUL
+</x API>
 
+    é uma interface de aplicativos para aplicativos.
+
+    Basicamente é um programa menor que é um intermerdiario entre o programa maior e o programador(ou
+    outro programa, ou até mesmo uma outra API)
+    EX 1: o programa do seu site ter um mapa do google maps, implica-se dizer que no seu código esta integrado
+          a API do google maps (ele nao é nessessariamente o programa do maps
+          mas sim um programa do maps menor que acessa o principal e se comunica apenas o nessessario com ele
+          te devolvendo apenas o que foi determinado pela API sendo assim MAIS SEGURANÇA).
+
+
+    APIS são programas também, afinal ele tem sua estrutura e seus codigos tambem
+    EX 2: seu site quer fazer entrega de frete, o unico lugar que calcula é o site dos correios.
+          entao o site dos correios disponibiliza uma API onde seu programa tem que acessalo (atraves de 
+          um link ou endpoint) mas nota-se que vc nem entra em link de site dos correios e sim a API,
+          a API pode ser chamada de interface por que é considera uma forma de acesso fazendo a 
+          intermediacao
+
+    qualquer coisa mesmo que muito simples é uma API
+    EX 3 - quero que ao clicar na tag </a> ele redireciona ao whatsweb do cara e o whats(se tiver no cel)
+    o href da tag sera o que acessa a api do whatsweb "api?whatsapp-numero.comseila"(um end point)
+    o link da api so serve pra chamar o whatsweb(que nao é uma api e sim o programa mesmo) mas no chat do 
+    telefone que acessou o link 
+
+    Frameworks podem ser considerados APIs e nao nessesariamente precisam se conectar a um outro programa
+    EX 4 - em livros o jquery é considerado uma API. teoricamente é, afinal é um arquivo que vc coloca
+           no seu programa que traduz comandos jquery em js, ele nao é uma interface a um programa maior
+           mas é chamado de API por ser um programa que se comporta como framework de uma linguagem.
+
+    nem toda API é WEB        
+    EX 5 - existem programas que vc pode fazer pro seu windows que pode se comunicar com APIS que o SO
+           mesmo disponibiliza, tipo uma api de data hora que seu programa solicitou, ai a 
+           api se comunica com o windows que devolve a API algo que sera passado para o seu software
+
+
+    as formas de se comunicar com uma API normalmente é em JSON ou XML    
+
+    CONSUMIR API - no caso vc acessa uma API para consumir os recursos dela
+    EX 6 - API do CEP dos correios ou API que recupera a cotação atual do dólar, vc acessa ambos 
+           que acessam os servidores principais ou seja, vc ta usando recursos externos para sua 
+           aplicação
+
+    CRIAR API - é o outro lado da moeda que é o que disponibiliza dados para o usuario
+    EX 7 - site do mercado livre - empresas que vendem por la porem ter um sistema proprio que
+           rebece os pedidos sem ter que entrar no site. apenas ultilizando a API deles ajudando
+           tanto eles quanto o mercado livre.
+
+    APP E API - normalmente o APP programa de celular é apenas o front end de algo e 
+               acessam APIS (via json ou xml) que podem ser apenas o backend de todo o sistema, 
+               podemos chamar esse backend que tem o CRUD de API, ele pode fazer funcoes de backend
+               mas tambem pode acessar outras APIS colocarmos
+    EX 8 - meu projeto AM que é um app do mpsp que acessa uma API (em spring boot) que pode acessar
+           outra API que no caso é o chatfuel 
+
+    tudo funciona por API
+    EX 9 - o XMLHTTPRESPONSE e Web Storage API sao apis fornecidas pelo seu navegador para JS 
+           então vc sempre estara ligado a uma API mesmo que não saiba 
+
+<!---------------------------------------------------------------------------------------------------->
+
+FRAMEWORK x BIBLIOTECAS (libs) x API
+
+    BIBLIOTECAS
+
+    Desenvolvedores disponibilizam bibliotecas que possuem muitas funções prontas. Assim, outros 
+    programadores podem utilizá-las, permitindo que o desenvolvimento seja mais fácil e rápido.
+    sem você precisar reinventar a roda. 
+    certamente já utilizou uma biblioteca, mesmo sem perceber. Por exemplo, quando vamos fazer um
+    sqrt em C, estamos utilizando a biblioteca math.h que possui essa função, outro exemplo de lib
+    é o jquery(engraçado né).
+    
+    API 
+    muitos acham que uma API é um serviço externo acessado pela aplicação mas nao, o termo api é bem 
+    abstrato na verdade podemos dizer que uma api é uma interface que orienta determinado programador 
+    conjunto de comandos, funções, protocolos e objetos em que programadores podem interagir com 
+    sistemas externos, ele também pode ter acesso a libs externas através dessa api. 
+    EX:hora do windows e google maps
+
+    
+    FRAMEWORKS 
+    poremos dizer que framework é um conjunto de libs, é uma estrutura real, ou conceitual, que visa servir 
+    como suporte (ou guia) para a construção de algo (um produto, por exemplo). “Este algo” herdará 
+    as características desta estrutura, implementando o produto final (“algo”).
+    frameworks sao sempre baseado em alguma linguagem de programação: ex: SPRING E HIBERNATE e .NET 
+  
+
+    podemos considerar o jquery uma API afinal ele é uma interface externa que acessamos e podemos 
+    considerar ele um framework por ser baseado em uma linguagem. enfim ha muitas confusões nisso.
+    porem convencionamente jquery é uma framework.
 <!---------------------------------------------------------------------------------------------------->
 
 REST
 
+    é um padrão de API (tem o padrão SOAP), é um protocolo que age no HTTP digamos assim 
+
+    é o nivel de maturidade em que sua API se encontra, REST pode se dizer que é um medidor funcional
+    da sua API e REST são niveis desse medidor
+
+    -niveis de maturidade do richardson 
+      
+    -> LEVEL 0: (the swamp of fox) 
+
+         -é o nivel mais comum de uma API no mercado onde vc usa 1 ENDPOINT ou poucos para varias 
+         features, EX: vc constroi uma api pra uma loja, e entao vc usa o endpoint dela para cadastar  
+         vendas. cadastrar distribuidor, cadastrar categorias e etc.  
+
+    -> LEVEL 1: (resources)
+
+         -aqui vc ja tem um endpoint para cada feature
+          EX: sua mesma api do mercado agora tem um endpoint para cliente, um end point para produto, 
+              um para fornecedor, vendas etc, é um endpoint para cada recurso especifico.
+
+    -> LEVEL 2: (verbs http)     
+         -alem de um endpoint para cada recurso se usa os verbos http neles(GET,POST,PUT,DELETE etc)
+         -um mesmo endpoint com métodos diferentes
+         -EX: existiria endpoints com methods POST para criar mercadoria um GET para listar mercadoria
+              ai existiriam endpoints de criacao e exclusao de clientes, fornecedores e etc. 
+              tudo gira em torno de endpoints para CRUD 
+    
+   
+             
 <!---------------------------------------------------------------------------------------------------->
 
-END POINT e diferencas com url
 
-<!---------------------------------------------------------------------------------------------------->
+REST FUL
 
-relacao end point com API 
+    -> LEVEL 3: (HATEOAS - hypermedias controls) - é quando URLS são retornadas como link atraves
+                do JSON, nesse nivel podemos dizer que sua api é REST FULL
+
+                EX: 
+
+                imagine a api da sua loja devolvendo o JSON em produtos,(sem HATEOAS)
+
+                {
+                  "nome": "Caderno",
+                  "descricao": "Caderno Espiral 100 folhas",
+                  "preco": 5.45
+                }
+
+                agora imagine ela devolvendo o mesmo produto porem ele contendo um link onde
+                você pode acessa-lo, esse link é uma hypermedia e nesse caso estamos trabalhando
+                com o modelo HATEOAS 
+              
+                {
+                  "nome": "Caderno",
+                  "descricao": "Caderno Espiral 100 folhas",
+                  "preco": 5.45,
+                  "links" : [{
+                        "rel" : "self"
+                        "href" : "http://localhost:8080/produto/1"   
+                        "method":"GET"      
+                  },
+                  "links" : [{
+                        "rel" : "update_produto"
+                        "href" : "http://localhost:8080/produto/1"   
+                        "method":"PUT"      
+                  },
+                  "links" : [{
+                        "rel" : "delete_produto"
+                        "href" : "http://localhost:8080/produto/1"   
+                        "method":"DELETE"      
+                  }] 
+                }
+
+                rel - Significa relacionamento. No nosso caso o link autoreferencia o produto. 
+                Sistemas mais complexos incluem outros tipos de relacionamentos;
+
+                href - caminho que leva ao produto
+
+    -> LEVEL 3+ : (a glory of rest) - após isso vc pode adicionar mais coisas, paginacao, otimizacao,
+                  mas ela ja é REST de qualquer jeito.   
+     
 
 <!---------------------------------------------------------------------------------------------------->
 
 WEB SERVICE
 
+     é uma WEB API, é um sistema que faz a comunicacao entre duas tecnologias independente da linguagem
+     em que ambas foram feitas, eles se comunicam via protocolo REST ou SOAP (ultimamente o que manda 
+     é o REST) com linguagens de comunicação universal entre essas aplicaçoes, que é o XML ou JSON 
+     (tem outros)
+
+     toda WEB service é uma API mas nem toda a API é uma WEB service (sistema hora windows)
+
+     app celular ================== web service =============== base de dados
+
+     veja, a app pelo cel nao tem acesso ao banco, ele so consegue acessar atraves do web service
+     sendo assim podemos dizer que tudo isso funciona atraves de uma rede (conectados a internet)
+
 <!---------------------------------------------------------------------------------------------------->
 
-FEATURES 
+APLICAÇÕES WEB
+
+    é igual ao aplicativo, porem eles rodam na WEB, aplicativos que rodam na via internet que 
+    interagem com o protocolo HTTP por exemplo
+
+    Aplicações WEB
+    Executam em servidores e geram conteúdo HTML, que é interpretado por navegadores. 
+    A interface reside no cliente (Navegar) e o processamento acontece no servidor de aplicações. 
+    O banco de dados pode estar em uma terceira máquina. todos os sistemas envolvidos são aplicativos web
+
+    Aplicações Desktop
+    Executam em estações locais, podendo acessar um banco de dados que está em outra estação, 
+    mas o processamento de dados ocorre localmente.
+
+    Servidores WEB 
+    Os Navegadores fornecem a interface com o usuário, utilizando a Rede como meio de comunicação
+    com o Servidor WEB para obter os dados (é considerado uma aplicção WEB)
+    ex: apache
+
+    Aplicacao WEB x Web Service x API 
+
+    uma service web pode ser uma aplicacao web que comunica duas aplicacoes web, podemos chamar 
+    uma aplicacao WEB de API tbm, vai que essa api possa ser acessada via web, são basicamente 
+    sinonimos.     
 
 <!---------------------------------------------------------------------------------------------------->
 
-API
+URL x URI x URN 
+   
+   os 3 basicamente são links de acesso
+
+
+   URL – Uniform Resource Locator - Localizador de Recursos Universal 
+        e como o próprio nome diz, se refere ao local, o Host que você quer acessar determinado recurso. 
+        O objetivo da URL é associar um endereço remoto com um nome de recurso na Internet.
+   
+        Exemplo de URL
+   
+        woliveiras.com.br
+        woliveiras.org
+        woliveiras.xxx
+
+        Ou seja, acessando esses endereços você cai no servidor onde está minha página - Só exemplo -
+        e o servidor vai se encarregar de processar sua solicitação.
+
+   URN – Uniform Resource Name - Nome de Recursos Universal 
+   
+         é o nome do recurso que será acessado e também fará parte da URI.
+   
+         home.html
+         contato.php
+         servicos.html
+
+         É comum associarmos URN a página que estamos acessando.
+         ex.: /api/v01/exemplo/usuarios
+
+         numeros ISBN são os melhores exemplos de URN 
+         url para lei seca no brasil
+
+         ex.: urn:lex:br:federal:lei:2008-06-19;11705  
+         
+         resolver - os resolvers de URN é responsavel por interpretar um dado URN traduzindo para URL
+                    Resolvedores locais, centrais e federados: a resolução de URNs é idealmente realizada
+                    por um PURLs (Persistent Uniform Resource Locators)[3], mas pode ser também uma
+                    ferramenta para portais locais. Uma forma de garantir a consistência e 
+                    operacionalidade entre resolvedors locais e centrais é a federação: 
+                    o URN resolver local quando não sabe resolver, repassa o pedido para o central.
+  
+        
+   URI – Uniform Resource Identifier - Identificador de Recursos Universal.
+         como diz o próprio nome, é o identificador do recurso. Pode ser uma imagem, uma página, etc, pois tudo o que está disponível na internet precisa de um identificador único para que não seja confundido.
+         
+         Exemplos de URI
+         
+         https://woliveiras.com.br/desenvolvedor-front-end/
+         https://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+
+   A URI une o Protocolo (https://) a localização do recurso (URL - woliveiras.com.br) 
+   e o nome do recurso (URN - /desenvolvedor-front-end/) para que você acesse as coisas na Web.      
+
+   toda URN e toda URL é uma URI
 
 <!---------------------------------------------------------------------------------------------------->
 
-VALIDAÇÃO
+ENDPOINT x URL x API 
+
+  é um web service, é uma URL onde seu serviço pode ser acessado por uma aplicação cliente 
+  são interfaces da API.
+  
+   ______                            _____
+  |      |------------> endpoint -->|     | 
+  |client|                          | API |
+  |      |------------> endpoint -->|     |
+  |      |                          |     |
+  |______|------------> endpoint -->|_____|
+
+  pode ser um gateway de pagamento um gateway de rastreamento 
+
+  EX: http:/seusite.com.br/api/v1/produtos
+  EX: http:/seusite.com.br/api/v1/categorias
+                          ^
+                          as uris são os endpoints
+
+  vc pode ter 2 endpoints (ou 5+) iguais mais com METHODS diferentes (DELETE, POST, GET)
+
+  eles se comunicam via JSON XML ou YAML (os endpoints com o cliente ao receber um response da API)
+
+  APIs podem existir sem endpoints
+<!---------------------------------------------------------------------------------------------------->
+
+BACKLOG
 
 <!---------------------------------------------------------------------------------------------------->
 
-FEATURES
+FEATURES , EPICS e STORIES
+
+      Pense em epic como o namespace, em feature como a classe, e em story como método. 
+      Porque em cada desenvolvimento tem um módulo que possui objetos que possui comportamentos
+
+      EPIC - é uma descrição geral do que se deseja do software. Não há muitos detalhes 
+             e recomenda-se manter dentro apenas uma interação. É uma forma de organizar (agrupar)
+             muitas features. EX => gerenciar produtos.
+
+      FEATURE - é algo um pouco mais concreto do que terá, tem um pouco de detalhes do que é aquilo,
+                sua função. a funcionalidade Em caso dela ser complexa também deve manter dentro 
+                de uma interação de desenvolvimento. 
+                EX => função de venda do produto
+                   => listagem de produto
+
+      STORIES - dizem quem e o que deve ser feito, quais as operações que o usuário fará em cima 
+                daquela feature. 
+
+                Ex => FUNCAO DE VENDA DE PRODUTO => como vendedor, emito pedido de venda, 
+                financeiro aprova venda, estoquista separa produtos, despachante emite nota fiscal.
+
+    EX TOTAL:
+
+    Epic 1: Logistica
+           Feature 1: Itens do estoque
+                Story 1: Como usuario resposavel pelo estoque, desejo lista itens que estão no estoque;
+                Story 2: Como agente de recepcao de pacote, desejo poder informar que novo produtos 
+                         chegaram no estoque
+           Feature 2: Notas Fiscais
+                Story 1: Como usuario da contabilidade, desejo lançar NFs no sistema;
+    Epic 2: Loja Online
+           Feature 1: Vitrine
+                Story 1: Como cliente, desejo filtrar por produtos em promoção
+                Story 2: Como cliente, desejo adicionar um item ao carrinho de compras
+           Feature 2: Emitir ordem de compras
+                Story 1: Como cliente, desejo criar uma ordem de compra
+           Feature 3: cadastro de produtos na loja virtual   
+                Story 1: Como admin, quero inserir um novo produto
+    Epic 3: Finanças
+           Feature 1: Auditoria em ordens de compra
+
+<!---------------------------------------------------------------------------------------------------->
+ 
+</x TASKS>
+
+    é o conjunto de tarefas para que se implemente uma user story
+
+    EX anterior: 
+
+    Epic 1: Logistica
+           Feature 1: ...
+           Feature 2: ...
+    Epic 2: Loja Online
+           Feature 1: ...
+           Feature 2: ...
+                Story 1: ...
+           Feature 3: cadastro de produtos na loja virtual   
+                Story 1: Como admin, quero inserir um novo produto
+                      Task 1: implementar a interface
+                      Task 2: escrever código para inserir produto
+                      Task 3: escrever codigo para BD 
+                      Task 4: realizar testes de Integracao
+                      Task 5: aplicar ATs (testes de aceitacao)
+    Epic 3: Finanças
+           Feature 1: ...
+ 
+    TASKS x FEATURES
+
+    diferenca com feature: a feature descreve a funcionalidade como um todo (cadastro) e a Task
+    as pequenas tarefas realizadas que somadas chegam nessa funcionalidade concluida (criar botao 
+    pra cadastrar, fazer codigo, validar, validar no banco, teste TDD etc.)
+
+
+<!---------------------------------------------------------------------------------------------------->
+
+</x PAGINAÇÃO>
+
+     é uma numeração ordinal das páginas, que geralmente está localizada na parte superior ou 
+     inferior das páginas de um site.      
+     
+     ex:       anterior  2  3  |4|  5  proximo>
+ 
+<!---------------------------------------------------------------------------------------------------->
+
+</x VALIDAÇÃO>
+
+     Validação de dados é o processo de garantir que os dados foram verificados quanto a erros.
+
+     validar um formulario por ex significa vc verificar se o user ao digitar dados errados no campo o 
+     programa acuse erro, ex: digitar letra em campo DATA,
+     se ao cliente digitar e nao acontecer nada , e for cadastrado, dizermos que o programa nao 
+     foi validado
+
+     existe validação por front-end e por back-end o front end se valida muito no javascript, ja no back 
+     podemos validar pelo php ou spring
+
+     a validação esta intrinsicamente ligada a algo que o cliente vai inserir ou escolher.
 
 <!---------------------------------------------------------------------------------------------------->
 
@@ -49,6 +420,8 @@ NODES
 <!---------------------------------------------------------------------------------------------------->
 
 INJECÃO DE DEPENDENCIA
+
+dependencia
 
 <!---------------------------------------------------------------------------------------------------->
 
@@ -193,6 +566,9 @@ COMPILADOR ou LINGUAGEM COMPILADA
  
 <!---------------------------------------------------------------------------------------------------->
 
+</x INJECAO DE DEPENDENCIA>
+
+  <a href="acoplamento.php"></a>
 
 
 <!---------------------------------------------------------------------------------------------------->
@@ -252,7 +628,7 @@ REMOTE E ORIGIN
 
 <!---------------------------------------------------------------------------------------------------->
 
-<x QUERY>
+</x QUERY>
 
   É uma solicitação de informações feita ao banco de dados. que retorna uma tabela ou um conjunto delas, 
   figuras, gráficos ou resultados complexos podendo se usar varias linguagens disso (sql, oracle, mongo)
@@ -261,7 +637,7 @@ REMOTE E ORIGIN
 
 <!---------------------------------------------------------------------------------------------------->
 
-<x RESULT SET>
+</x RESULT SET>
 
   ResultSet é uma interface utilizada(EM JAVA) pra guardar dados vindos de um banco de dados.
   Basicamente, ela guarda o resultado de uma pesquisa numa estrutura de dados que pode ser percorrida, 
@@ -271,7 +647,7 @@ REMOTE E ORIGIN
 
 <!---------------------------------------------------------------------------------------------------->
 
-<x JOIN>  
+</x JOIN>  
 
     <a href="join.html"></a>
 
@@ -380,7 +756,7 @@ PROFESSOR                              ARMARIO
 
 <!---------------------------------------------------------------------------------------------------->
 
-   ESQUEMA = BANCO DE DADOS?
+ESQUEMA = BANCO DE DADOS?
 
 <!---------------------------------------------------------------------------------------------------->
 
@@ -392,7 +768,7 @@ PROFESSOR                              ARMARIO
 
 <!---------------------------------------------------------------------------------------------------->
 
-BASE DE DADOS
+</x BASE DE DADOS>
 
     Bancos de dados ou bases de dados são conjuntos de arquivos relacionados entre si com registros 
     sobre pessoas, lugares ou coisas. São coleções organizadas de dados que se relacionam de forma a 
@@ -427,7 +803,9 @@ TASKS
 FETCH 
 
 <!---------------------------------------------------------------------------------------------------->
+
 <!---------------------------------------------------------------------------------------------------->
+
 <!---------------------------------------------------------------------------------------------------->
 
 </body>
